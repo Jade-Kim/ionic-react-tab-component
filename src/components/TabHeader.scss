@@ -1,0 +1,48 @@
+#tab-header {
+  ion-toolbar {
+    --border-width: 0 0 0px;
+  }
+
+  @mixin colored-tab-bar($color, $highlight) {
+    .colored-tab-bar-#{$color}-#{$highlight} {
+      ion-segment {
+        --background: var(--ion-color-#{$color});
+      }
+
+      ion-segment-button {
+        --background-checked: var(--ion-color-#{$color}-tint);
+        --indicator-color: var(--ion-color-#{$highlight});
+        --indicator-height: 5px;
+        --color-checked: var(--ion-color-#{$highlight});
+        --color: var(--ion-color-#{$highlight});
+      }
+    }
+  }
+  @include colored-tab-bar('primary', 'light');
+  @include colored-tab-bar('primary', 'medium');
+  @include colored-tab-bar('primary', 'dark');
+  @include colored-tab-bar('secondary', 'light');
+  @include colored-tab-bar('secondary', 'medium');
+  @include colored-tab-bar('secondary', 'dark');
+  @include colored-tab-bar('tertiary', 'light');
+  @include colored-tab-bar('tertiary', 'medium');
+  @include colored-tab-bar('tertiary', 'dark');
+  @include colored-tab-bar('success', 'light');
+  @include colored-tab-bar('success', 'medium');
+  @include colored-tab-bar('success', 'dark');
+  @include colored-tab-bar('warning', 'light');
+  @include colored-tab-bar('warning', 'medium');
+  @include colored-tab-bar('warning', 'dark');
+  @include colored-tab-bar('danger', 'light');
+  @include colored-tab-bar('danger', 'medium');
+  @include colored-tab-bar('danger', 'dark');
+  @include colored-tab-bar('light', 'light');
+  @include colored-tab-bar('light', 'medium');
+  @include colored-tab-bar('light', 'dark');
+  @include colored-tab-bar('medium', 'light');
+  @include colored-tab-bar('medium', 'medium');
+  @include colored-tab-bar('medium', 'dark');
+  @include colored-tab-bar('dark', 'light');
+  @include colored-tab-bar('dark', 'medium');
+  @include colored-tab-bar('dark', 'dark');
+}
